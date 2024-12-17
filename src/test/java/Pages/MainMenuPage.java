@@ -67,4 +67,12 @@ public class MainMenuPage extends ParentPage {
     @FindBy(xpath = "//*[@id='tinymce'] ")
     public WebElement hwSubmitTextArea;
 
+    @FindBy(css = "ng-star-inserted ")
+    public WebElement EndLessons;
+
+    @FindBy(css = "ng-star-inserted ")
+    public WebElement RecordinBtn;
+
+
+
 }
