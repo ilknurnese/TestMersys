@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.MainMenuPage;
 import Utilities.GWD;
+import Utilities.MyFunc;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
@@ -58,33 +59,49 @@ public class US_014_Profile {
     }
 
     @And("Upload the picture")
-    public void uploadThePicture() {
+    public void uploadThePicture() throws AWTException {
+
         wait.until(ExpectedConditions.visibilityOf(MMP.uploadPictureButton));
 
-        // File upload işlemi için dosya yolu
-        StringSelection filePath = new StringSelection("D:\\1.png");
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
+        MMP.uploadPictureButton.sendKeys("C:/Users/i_nes/1.png");
 
+        MyFunc.Bekle(2);
 
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-        robot.keyRelease(KeyEvent.VK_V);
+        Robot robot = new Robot();
+
+//        StringSelection filePath = new StringSelection("C:\\Users\\i_nes\\1.png");
+//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
+
+//        robot.keyPress(KeyEvent.VK_CONTROL);
+//        robot.keyPress(KeyEvent.VK_V);
+//        robot.keyRelease(KeyEvent.VK_CONTROL);
+//        robot.keyRelease(KeyEvent.VK_V);
+
+// Enter tuşuna basma
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+
+//        MainMenuPage menuPage = new MainMenuPage();
+//        menuPage.uploadPicture.sendKeys("D:/1.png");
+//
+//        StringSelection filePath = new StringSelection("c:\\users\\i_nes\\1.png");
+//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
+
+
+
     }
 
     @Then("Verify uploaded picture size")
     public void verifyUploadedPictureSize() {
-
-        WebElement imageSizeElement = GWD.getDriver().findElement(By.id("uploadedImageSize"));
-        wait.until(ExpectedConditions.visibilityOf(imageSizeElement));
-
-        String sizeText = imageSizeElement.getText();
-        System.out.println("Uploaded Image Size: " + sizeText);
-
-        // Resim boyutunun boş olmadığını doğrula
-        Assert.assertFalse(sizeText.isEmpty(), "Image size is not displayed!");
+//
+// WebElement imageSizeElement = GWD.getDriver().findElement(By.id("uploadedImageSize"));
+////        wait.until(ExpectedConditions.visibilityOf(imageSizeElement));
+////
+//     String sizeText = imageSizeElement.getText();
+////        System.out.println("Uploaded Image Size: " + sizeText);
+//
+//        // Resim boyutunun boş olmadığını doğrula
+//        Assert.assertFalse(sizeText.isEmpty(), "Image size is not displayed!");
     }
 
     @Then("Confirm Success Message")

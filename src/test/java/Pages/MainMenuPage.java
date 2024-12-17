@@ -140,9 +140,9 @@ public class MainMenuPage extends ParentPage {
     //@FindBy(xpath = "//img[contains(@class,'profile-image')]")
     public WebElement uploadPicture;
 
-    @FindBy(xpath ="//div[@id='cdk-describedby-message-ng-1-107' and text()='Upload Picture']")
-
+    //@FindBy(xpath ="//div[@id='cdk-describedby-message-ng-1-107' and text()='Upload Picture']")
 //   @FindBy(xpath = "//*[contains(@class,'upload')]")
+    @FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-fab mat-mdc-fab-base mdc-fab--mini mat-mdc-mini-fab mat-accent mat-mdc-button-base']//fa-icon[@class='ng-fa-icon']//*[name()='svg']")
     public WebElement uploadPictureButton;
 
     //@FindBy(xpath = "//span[text()=' Upload ']")
