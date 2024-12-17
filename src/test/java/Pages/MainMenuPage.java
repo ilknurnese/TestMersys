@@ -126,4 +126,53 @@ public class MainMenuPage extends ParentPage {
     public WebElement detailPage;
 
 
+    //US14
+    @FindBy(xpath = "//span[@class='username mr-12']")
+    public WebElement profileMenu;
+
+    @FindBy(xpath = "//span[text()='Settings']")
+    public WebElement settings;
+
+    @FindBy(xpath ="//img[@class='profile-image avatar huge ng-star-inserted']")
+    //@FindBy(xpath = "//img[contains(@class,'profile-image')]")
+    public WebElement uploadPicture;
+
+    @FindBy(xpath ="//div[@id='cdk-describedby-message-ng-1-107' and text()='Upload Picture']")
+
+//   @FindBy(xpath = "//*[contains(@class,'upload')]")
+    public WebElement uploadPictureButton;
+
+    //@FindBy(xpath = "//span[text()=' Upload ']")
+    ////span[@class='mdc-button__label' and normalize-space()='Upload']
+    @FindBy(xpath="//span[normalize-space()='Upload']")
+    public WebElement uploadButton;
+
+@FindBy(xpath="//span[@class='mdc-button__label' and normalize-space()='Save']")
+//    @FindBy(xpath = "//*[@data-icon='floppy-disk']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[text()='Profile successfully updated']")
+    public WebElement profileSuccessfullyUpdated;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='theme']")
+    public WebElement profileThemeSelection;
+
+    @FindBy(xpath = "//mat-option[@value='purple-theme']")
+    public WebElement profilePurple;
+
+    @FindBy(xpath = "//mat-option[@value='dark-purple-theme']")
+    public WebElement profileDPurple;
+
+    @FindBy(xpath = "//mat-option[@value='indigo-theme']")
+    public WebElement profileIndigo;
+
+    @FindBy(xpath = "//link[@id='pfThemeLoader']")
+    public WebElement profileSelectedTheme;
+
+
+
+
+
+
+
 }

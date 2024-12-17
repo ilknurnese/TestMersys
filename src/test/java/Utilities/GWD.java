@@ -7,7 +7,7 @@ import java.time.Duration;
 
 //General Web Driver
 public class GWD {
-    private static WebDriver driver;
+    public static WebDriver driver;
     public static WebDriver getDriver(){
         if(driver==null)
             driver=new ChromeDriver();
