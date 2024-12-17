@@ -7,8 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainMenuPage extends ParentPage {
     public MainMenuPage() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
+
     @FindBy(xpath = "//*[@placeholder='Kullanıcı Adı']")
     public WebElement userName;
 
@@ -21,7 +22,7 @@ public class MainMenuPage extends ParentPage {
     @FindBy(xpath = "//*[text()='Assignments']")
     public WebElement Assignments;
 
-    @FindBy(xpath="//*[@class='cdk-overlay-container']")
+    @FindBy(xpath = "//*[@class='cdk-overlay-container']")
     public WebElement OdevSayisi; //.getText() deyince ödev sayısını veriyor
 
 
@@ -66,5 +67,63 @@ public class MainMenuPage extends ParentPage {
 
     @FindBy(xpath = "//*[@id='tinymce'] ")
     public WebElement hwSubmitTextArea;
+
+
+    // US 6,7,8,9
+    //binController
+    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]//span[2]")
+    public WebElement hamburgerMenuButton;
+
+    @FindBy(xpath = "//span[text()='Messaging']")
+    public WebElement messagingButton;
+
+    @FindBy(xpath = "//span[text()='Trash']")
+    public WebElement trashButton;
+
+    @FindBy(xpath = "(//tbody//td//button)[2]")
+    public WebElement restoreIcon;
+
+    @FindBy(xpath = "(//tbody//td//button)[3]")
+    public WebElement deleteIcon;
+
+    @FindBy(xpath = "(//button[@type='submit']//span)[2]")
+    public WebElement deleteToTrashBox;
+
+
+    //deleteOutMessaging
+    @FindBy(xpath = "(//tbody//td//button)[2]")
+    public WebElement message;
+
+    @FindBy(xpath = "//span[text()='Move to Trash']")
+    public WebElement moveToTrash;
+
+    @FindBy(xpath = "//mat-dialog-actions[@class='mat-mdc-dialog-actions mdc-dialog__actions']//div//button")
+    public WebElement confirmDeleteYes;
+
+
+    //finance
+    @FindBy(xpath = "//span[text()='Finance']")
+    public WebElement finance;
+
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement myFinance;
+
+    @FindBy(xpath = "(//tbody//td)[2]")
+    public WebElement financePageIsDisplayed;
+
+
+    //studentBalanceDetails
+    @FindBy(xpath = "(//tbody//td//div//span)[1]")
+    public WebElement studentName;
+
+    @FindBy(xpath = "//span[text()='Outbox']")
+    public WebElement outBoxButton;
+
+    @FindBy(xpath = "(//div[@role='tab'])[2]")
+    public WebElement balanceDetailsButton;
+
+    @FindBy(xpath = "//table//tbody//tr[1]//td[4]")
+    public WebElement detailPage;
+
 
 }
