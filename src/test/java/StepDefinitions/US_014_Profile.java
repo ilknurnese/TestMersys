@@ -15,13 +15,13 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class US_14_Profile {
+public class US_014_Profile {
 
     MainMenuPage MMP = new MainMenuPage();
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
     Robot robot;
 
-    public US_14_Profile() {
+    public US_014_Profile() {
         try {
             robot = new Robot();
         } catch (AWTException e) {

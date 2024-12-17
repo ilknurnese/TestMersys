@@ -45,6 +45,10 @@ public class ParentPage {
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
     }
 
+    public void LoginContainsText(WebElement element, String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()) );
+    }
 
 
 }

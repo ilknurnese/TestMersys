@@ -10,13 +10,16 @@ public class MainMenuPage extends ParentPage {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@placeholder='Kullanıcı Adı']")
+   // @FindBy(xpath = "//*[@placeholder='Kullanıcı Adı']")
+    @FindBy(xpath = "//input[@placeholder='Username']")
     public WebElement userName;
 
-    @FindBy(xpath = "//*[@placeholder='Parola']")
+    //@FindBy(xpath = "//*[@placeholder='Parola']")
+    @FindBy(xpath = "//input[@placeholder='Password']")
     public WebElement passWord;
 
-    @FindBy(xpath = "//*[text()=' GİRİŞ YAP ']")
+  //  @FindBy(xpath = "//*[text()=' GİRİŞ YAP ']")
+    @FindBy(xpath = "//span[@class='mdc-button__label']")
     public WebElement loginTo;
 
     @FindBy(xpath = "//*[text()='Assignments']")
@@ -170,6 +173,8 @@ public class MainMenuPage extends ParentPage {
     public WebElement profileSelectedTheme;
 
 
+    @FindBy(xpath="//span[normalize-space()='Welcome, Student_7 11A !']")
+    public WebElement headText;
 
 
 
