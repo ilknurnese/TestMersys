@@ -150,8 +150,9 @@ public class MainMenuPage extends ParentPage {
     @FindBy(xpath="//span[normalize-space()='Upload']")
     public WebElement uploadButton;
 
-@FindBy(xpath="//span[@class='mdc-button__label' and normalize-space()='Save']")
-//    @FindBy(xpath = "//*[@data-icon='floppy-disk']")
+
+    // @FindBy(xpath = "//*[@data-icon='floppy-disk']")
+     @FindBy(xpath="//span[@class='mdc-button__label' and normalize-space()='Save']")
     public WebElement saveButton;
 
     @FindBy(xpath = "//div[text()='Profile successfully updated']")
