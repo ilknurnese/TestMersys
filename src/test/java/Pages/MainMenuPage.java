@@ -128,8 +128,7 @@ public class MainMenuPage extends ParentPage {
     @FindBy(xpath = "//table//tbody//tr[1]//td[4]")
     public WebElement detailPage;
 
-
-    //US14
+    //Profile Picture Update
     @FindBy(xpath = "//span[@class='username mr-12']")
     public WebElement profileMenu;
 
@@ -152,7 +151,8 @@ public class MainMenuPage extends ParentPage {
 
 
     // @FindBy(xpath = "//*[@data-icon='floppy-disk']")
-     @FindBy(xpath="//span[@class='mdc-button__label' and normalize-space()='Save']")
+    // @FindBy(xpath="//span[@class='mdc-button__label' and normalize-space()='Save']")
+    @FindBy(xpath = "//button[@class='mat-mdc-accent mdc-button mat-mdc-button mat-mdc-raised-button mat-accent mat-mdc-button-base ng-star-inserted']//span[@class='mdc-button__label']")
     public WebElement saveButton;
 
     @FindBy(xpath = "//div[text()='Profile successfully updated']")

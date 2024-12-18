@@ -17,14 +17,13 @@ import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 public class US_014_Profile {
-
     MainMenuPage MMP = new MainMenuPage();
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
     Robot robot;
 
     public US_014_Profile() {
         try {
-            robot = new Robot();
+            this.robot = new Robot();
         } catch (AWTException e) {
             throw new RuntimeException("Robot initialization failed!", e);
         }
@@ -48,8 +47,10 @@ public class US_014_Profile {
                     break;
                 case "uploadButton":
                     MMP.myClick(MMP.uploadButton);
+                    MyFunc.Bekle(5);
                     break;
                 case "saveButton":
+                    MyFunc.Bekle(2);
                     MMP.myClick(MMP.saveButton);
                     break;
                 default:
@@ -59,49 +60,25 @@ public class US_014_Profile {
     }
 
     @And("Upload the picture")
-    public void uploadThePicture() throws AWTException {
-
-        wait.until(ExpectedConditions.visibilityOf(MMP.uploadPictureButton));
-
-        MMP.uploadPictureButton.sendKeys("C:/Users/i_nes/1.png");
+    public void uploadThePicture() {
 
         MyFunc.Bekle(2);
 
-        Robot robot = new Robot();
+        StringSelection filePath = new StringSelection("C:\\Users\\i_nes\\1.png");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
 
-//        StringSelection filePath = new StringSelection("C:\\Users\\i_nes\\1.png");
-//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
 
-//        robot.keyPress(KeyEvent.VK_CONTROL);
-//        robot.keyPress(KeyEvent.VK_V);
-//        robot.keyRelease(KeyEvent.VK_CONTROL);
-//        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
 
-// Enter tuşuna basma
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-//        MainMenuPage menuPage = new MainMenuPage();
-//        menuPage.uploadPicture.sendKeys("D:/1.png");
-//
-//        StringSelection filePath = new StringSelection("c:\\users\\i_nes\\1.png");
-//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
 
 
 
-    }
-
-    @Then("Verify uploaded picture size")
-    public void verifyUploadedPictureSize() {
-//
-// WebElement imageSizeElement = GWD.getDriver().findElement(By.id("uploadedImageSize"));
-////        wait.until(ExpectedConditions.visibilityOf(imageSizeElement));
-////
-//     String sizeText = imageSizeElement.getText();
-////        System.out.println("Uploaded Image Size: " + sizeText);
-//
-//        // Resim boyutunun boş olmadığını doğrula
-//        Assert.assertFalse(sizeText.isEmpty(), "Image size is not displayed!");
     }
 
     @Then("Confirm Success Message")
