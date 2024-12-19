@@ -13,7 +13,6 @@ import java.time.Duration;
 public class US_008_financeSteps {
     MainMenuPage MMP=new MainMenuPage();
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
-    Actions actions=new Actions(GWD.getDriver());
 
     @When("navigate to Finance page")
     public void navigateToFinancePage() {
