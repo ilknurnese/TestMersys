@@ -5,13 +5,11 @@ import Pages.MainMenuPage;
 import Utilities.GWD;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class deleteOutMessagingSteps {
+public class US_007_deleteOutMessagingSteps {
     MainMenuPage MMP = new MainMenuPage();
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
