@@ -5,6 +5,7 @@ import Pages.MainMenuPage;
 import Utilities.GWD;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -12,6 +13,7 @@ import java.time.Duration;
 public class US_008_financeSteps {
     MainMenuPage MMP=new MainMenuPage();
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+    Actions actions=new Actions(GWD.getDriver());
 
     @When("navigate to Finance page")
     public void navigateToFinancePage() {
