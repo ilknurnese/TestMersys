@@ -100,7 +100,6 @@ public class MainMenuPage extends ParentPage {
   @FindBy(xpath = "(//button[@type='submit']//span)[2]")
   public WebElement deleteToTrashBox;
 
-
   //deleteOutMessaging
   @FindBy(xpath = "(//tbody//td//button)[2]")
   public WebElement message;
