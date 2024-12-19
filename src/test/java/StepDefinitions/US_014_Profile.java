@@ -64,7 +64,7 @@ public class US_014_Profile {
 
         MyFunc.Bekle(2);
 
-        StringSelection filePath = new StringSelection("C:\\Users\\i_nes\\1.png");
+        StringSelection filePath = new StringSelection("C:\\Users\\i_nes\\4.jpg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
 
         robot.keyPress(KeyEvent.VK_CONTROL);
