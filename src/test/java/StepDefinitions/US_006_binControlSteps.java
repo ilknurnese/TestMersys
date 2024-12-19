@@ -4,7 +4,7 @@ import Pages.MainMenuPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
-public class binControlSteps {
+public class US_006_binControlSteps {
     MainMenuPage MMP = new MainMenuPage();
 
 

@@ -5,7 +5,7 @@ import Pages.MainMenuPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class studenBalanceDetailSteps {
+public class US_009_studentBalanceDetailSteps {
 MainMenuPage MMP=new MainMenuPage();
     @And("fistly click on the student name and click on the balance details")
     public void fistlyClickOnTheStudentNameAndClickOnTheBalanceDetails() {
