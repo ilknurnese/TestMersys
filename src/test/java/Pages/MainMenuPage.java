@@ -198,6 +198,76 @@ public class MainMenuPage extends ParentPage {
   @FindBy(xpath = "//div[contains(text(),\"Profile successfully updated\")]")
   public WebElement successMessage;
 
+  //us10
+  @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]//span[2]")
+  public WebElement HamburgerMenu;
+
+  @FindBy(xpath = "//span[text()='Finance']")
+  public WebElement Finance;
+
+  @FindBy(xpath = "//span[text()='My Finance']")
+  public WebElement Myfinance;
+
+  @FindBy(xpath = "(//tbody//td//div//span)[1]")
+  public WebElement Studentname;
+
+  @FindBy(xpath = "//div[contains(@class, 'mdc-tab--active') and .//span[contains(text(), 'Online Payment')]]")
+  public WebElement OnlinePayment;
+
+  @FindBy(xpath = "//div[@role='tab']//span[contains(text(), 'Fee/Balance Detail')]")
+  public WebElement FeeBalanceDetail;
+
+  @FindBy(xpath = "(//label[@class='mdc-label'])[1]")
+  public WebElement Stripe;
+
+  @FindBy(xpath = "//*[@id='mat-radio-5']/div/label/span")
+  public WebElement PayInFull;
+
+  @FindBy(xpath = "//span[@_ngcontent-ng-c1391631227='' and text()='Pay']")
+  public WebElement Pay;
+
+  @FindBy(xpath = "(//*[@id='ms-currency-field-0'])[2]")
+  public WebElement Amount;
+
+  @FindBy(xpath = " //fa-icon[contains(@class, 'ng-fa-icon') and contains(@class, 'ng-star-inserted')]")
+  public WebElement PayClick;
+
+  @FindBy(xpath ="//input[contains(@placeholder, '1234') and contains(@class, 'Input')]")
+  public WebElement CardNumber;
+
+  @FindBy(xpath = "(//input[starts-with(@id, 'Field-expiryInput')])[1]")
+  public WebElement ExpirationDate;
+
+  @FindBy(xpath = "//input[starts-with(@id,'2Field-cvcInput')]")
+  public WebElement SecurityCode;
+  //us11
+
+  //us12
+  @FindBy(xpath = "/html/body/app/student-layout/div/mat-drawer-container/mat-drawer-content/div[2]/student-fees/ms-browse/div/ms-browse-table/div/ms-table/div/table/tfoot/tr[2]/td/div/div/button/span[2]")
+  public WebElement Ellipsis ;
+
+  @FindBy(xpath = "//button[contains(@class, 'mat-mdc-menu-item')]//span[contains(text(), 'Excel')]")
+  public WebElement Exxel;
+
+  //Us13
+  @FindBy(xpath = "(//span[text()='Attendance'])[3]")
+  public WebElement Attendance;
+
+  @FindBy(xpath = "//span[text()='Attendance Excuses (Parents)']")
+  public WebElement AttendanceExcusesParents;
+
+  @FindBy(xpath = "//*[@id='ms-table-0_buttons']/ms-table-toolbar/div/ms-add-button/button/span[2]")
+  public WebElement Plus;
+
+  @FindBy(xpath = "//textarea[@placeholder='Message']")
+  public WebElement Message;
+
+  @FindBy(xpath = "//span[text()='Attach Files...']")
+  public WebElement AttachFiles;
+
+  @FindBy(xpath = "//span[contains(@class, 'ng-star-inserted') and text()='Send']")
+  public WebElement Send;
+
   public WebElement getThemeOption(String themeName) {
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
     String normalizedTheme = themeName.toLowerCase().replace(" ", "-");
