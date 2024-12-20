@@ -87,10 +87,10 @@ public class MainMenuPage extends ParentPage {
   // US 6,7,8,9
   //binController
   //@FindBy(xpath = "//div[@class='cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing']")
+  // //button[@class="mat-mdc-menu-trigger mat-mdc-button-wrapper mdc-button mat-mdc-button mat-mdc-button-unchecked mat-unthemed mat-mdc-button-base cdk-focused cdk-mouse-focused"]//fa-icon[@class="ng-fa-icon mat-mdc-tooltip-trigger"]//*[name()="svg"]
   @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]//span[2]")
   public WebElement hamburgerMenuButton;
 
-  // @FindBy(xpath = "//span[text()='Messaging']")
   @FindBy(xpath = "//span[contains(text(),'Messaging')]")
   public WebElement messagingButton;
 

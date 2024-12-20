@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import Utilities.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +28,7 @@ public class ParentPage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
         element.click();
+        MyFunc.Bekle(2);
     }
 
     public void scrollToElement(WebElement element){
