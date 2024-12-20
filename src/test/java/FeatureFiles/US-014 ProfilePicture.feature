@@ -4,6 +4,7 @@ Feature: Profile Functionality
     Given Navigate to TestMersys
     When Enter username and Password as username "Student_7" as password "S12345"
 
+  @Regression
   Scenario: Profile Picture Upload
     # 1. Profile > Settings
     And Click on the Element in Dialog
