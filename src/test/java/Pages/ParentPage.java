@@ -52,5 +52,10 @@ public class ParentPage {
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()) );
     }
 
+    public void veriftisDisplaydText(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Assert.assertTrue(element.isDisplayed(),"Aradığınız öğe bulunamadı");
+
+    }
 
 }
