@@ -13,6 +13,7 @@ import org.testng.annotations.DataProvider;
 
 
 public class TestRunnerAll extends AbstractTestNGCucumberTests {
+
 //    Eğer senaryoları paralel olarak çalıştırmak istiyorsanız,
 //    TestNG ile entegre edilen paralel çalışma özelliğini etkinleştirebilirsiniz:
 
