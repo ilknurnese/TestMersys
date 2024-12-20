@@ -18,12 +18,16 @@ public class MainMenuPage extends ParentPage {
     PageFactory.initElements(GWD.getDriver(), this);
   }
 
+  //     //mat-label[@class="ng-tns-c508571215-1"]
+  //
   // @FindBy(xpath = "//*[@placeholder='Kullanıcı Adı']")
-  @FindBy(xpath = "//input[@placeholder='Username']")
+  //@FindBy(xpath = "//input[@placeholder='Username']")
+  @FindBy(xpath = "//input[@id='mat-input-0']")
   public WebElement userName;
 
-  //@FindBy(xpath = "//*[@placeholder='Parola']")
-  @FindBy(xpath = "//input[@placeholder='Password']")
+  // @FindBy(xpath = "//*[@placeholder='Parola']")
+  //  @FindBy(xpath = "//input[@placeholder='Password']")
+  @FindBy(xpath = "//input[@id='mat-input-1']")
   public WebElement passWord;
 
   //  @FindBy(xpath = "//*[text()=' GİRİŞ YAP ']")
@@ -82,10 +86,12 @@ public class MainMenuPage extends ParentPage {
 
   // US 6,7,8,9
   //binController
+  //@FindBy(xpath = "//div[@class='cdk-overlay-backdrop cdk-overlay-transparent-backdrop cdk-overlay-backdrop-showing']")
   @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]//span[2]")
   public WebElement hamburgerMenuButton;
 
-  @FindBy(xpath = "//span[text()='Messaging']")
+  // @FindBy(xpath = "//span[text()='Messaging']")
+  @FindBy(xpath = "//span[contains(text(),'Messaging')]")
   public WebElement messagingButton;
 
   @FindBy(xpath = "//span[text()='Trash']")
