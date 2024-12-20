@@ -1,5 +1,7 @@
 Feature: Login to TestMersys
 
+
+  @SmokeTest
   Scenario: Login to WebSite
 
     Given Navigate to TestMersys

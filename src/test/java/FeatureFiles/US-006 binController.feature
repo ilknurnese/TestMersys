@@ -4,7 +4,6 @@ Background:
     When Enter username and Password as username "Student_7" as password " S12345"
 
 
-
   Scenario: Bin control
       When Navigate to trash box
       And Restore message on the trash box
