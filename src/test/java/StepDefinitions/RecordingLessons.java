@@ -10,6 +10,8 @@ public class RecordingLessons {
         MainMenuPage MMP=new MainMenuPage();
         MMP.myClick(MMP.EndLessons);
         MMP.myClick(MMP.RecordinBtn);
+        MMP.myClick(MMP.PlayBtn);
+
 
 
     }

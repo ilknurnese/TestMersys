@@ -73,6 +73,26 @@ public class MainMenuPage extends ParentPage {
     @FindBy(css = "ng-star-inserted ")
     public WebElement RecordinBtn;
 
+    @FindBy(css = "vjs-big-play-button")
+    public WebElement PlayBtn;
+
+
+    @FindBy(css = " column100 column1 details today-td ng-star-inserted")
+    public WebElement LessonsP;
+
+    @FindBy(css = "column100 column1 details ng-star-inserted")
+    public WebElement LessonsS;
+
+
+    @FindBy(css = "mat-ripple mat-mdc-tab-ripple")
+    public WebElement Calendar;
+
+    @FindBy(css = "mdc-tab mat-mdc-tab mat-focus-indicator ng-star-inserted mdc-tab--active mdc-tab-indicator--active")
+    public WebElement WCP;
+
+    @FindBy(css = "//*[@id=\"container-3\"]/ms-assignment-panel-student/div/div/div/div[1]/div[2]/div[2]/ms-search-button/div")
+    public WebElement SearchBtn;
+
 
 
 }
