@@ -268,6 +268,14 @@ public class MainMenuPage extends ParentPage {
   @FindBy(xpath = "//span[contains(@class, 'ng-star-inserted') and text()='Send']")
   public WebElement Send;
 
+  @FindBy(css = "ng-star-inserted ")
+  public WebElement EndLessons;
+
+  @FindBy(css = "ng-star-inserted ")
+  public WebElement RecordinBtn;
+
+
+
   public WebElement getThemeOption(String themeName) {
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
     String normalizedTheme = themeName.toLowerCase().replace(" ", "-");

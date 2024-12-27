@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-public class DiscussionWithChat {
+public class US_23_DiscussionWithChat {
     MainMenuPage mmp=new MainMenuPage();
     @Then("Click on Discussion with chat")
     public void clickOnDiscussionWithChat() {

@@ -4,17 +4,11 @@ import Pages.MainMenuPage;
 import Utilities.GWD;
 import Utilities.MyFunc;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-import java.sql.ClientInfoStatus;
-import java.util.List;
-
-public class Assignment {
+public class US_022_Assignment {
     MainMenuPage mmp=new MainMenuPage();
 
     @When("Click on Assignment")
@@ -48,4 +42,7 @@ public class Assignment {
     }
 
 
+    @Then("Click on endLessons")
+    public void clickOnEndLessons() {
+    }
 }
